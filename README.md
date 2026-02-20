@@ -1,5 +1,9 @@
 # GIOSK: Fast Service Discovery & Recon Engine
 
+<div align="center">
+	<img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/go.png" alt="Go" title="Go"/>
+</div>
+
 Giosk é um scanner de portas de alta performance desenvolvido em Go, focado em reconhecimento ativo e identificação de banners de serviço. Diferente de scanners genéricos, o Giosk prioriza a velocidade de execução via worker pools e a extração imediata de metadados de serviços (Banner Grabbing).
 
 ## Por que o Giosk?
@@ -22,7 +26,9 @@ apt install -y giosk
 ## Exemplo de uso
 ```bash
 giosk -t 192.168.1.1 -p 1-1024 -v -o scan_report.txt
-``` 
+```
+<img width="804" height="363" alt="image" src="https://github.com/user-attachments/assets/239ddea3-2514-47ef-bb1f-be166cda928e" />
+
 
 ## Workflow de Análise
 1. **Fase de Descoberta**: Use o Giosk com um range amplo (`-p 1-65535`) em um único alvo para mapear serviços ocultos.
