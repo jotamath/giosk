@@ -1,0 +1,11 @@
+name: "giosk"
+arch: "amd64"
+platform: "linux"
+version: "1.0.0"
+section: "default"
+priority: "extra"
+maintainer: "João Costa <joaomncosta0@gmail.com>"
+description: "Giosk: A high-performance port scanner and banner grabber for SOC analysts."
+contents:
+  - src: ./bin/giosk # Onde o seu binário compilado para Linux estará
+    dst: /usr/bin/giosk
