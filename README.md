@@ -20,8 +20,19 @@ Uma porta aberta é um ponto de entrada. No mundo do Pentesting e SOC, elas sign
 
 ## Instalação (FUTURO)
 ```bash
-apt install -y giosk
-``` 
+sudo snap install giosk
+```
+### Configuração de Permissões
+
+Por ser um scanner de rede distribuído sob isolamento de segurança (*strict confinement*), você precisa conceder permissões para que o Giosk acesse a rede:
+
+```bash
+sudo snap connect giosk:network
+sudo snap connect giosk:network-bind
+
+```
+
+---
 
 ## Exemplo de uso
 ```bash
@@ -29,12 +40,38 @@ giosk -t 192.168.1.1 -p 1-1024 -v -o scan_report.txt
 ```
 <img width="804" height="363" alt="image" src="https://github.com/user-attachments/assets/239ddea3-2514-47ef-bb1f-be166cda928e" />
 
+Seu README está com uma base técnica excelente! Como o Giosk agora é um **Snap**, você pode substituir aquela seção de "Instalação (FUTURO)" por algo real e profissional.
 
-## Workflow de Análise
-1. **Fase de Descoberta**: Use o Giosk com um range amplo (`-p 1-65535`) em um único alvo para mapear serviços ocultos.
-2. **Fase de Identificação**: Analise os Banners retornados. Se o banner estiver vazio, tente aumentar o `-to` (timeout), pois serviços lentos podem demorar a responder.
-3. **Exportação**: Utilize a flag `-o` para manter logs de auditoria.
+Aqui estão as adições sugeridas para o seu `README.md`, incluindo a seção de instalação e os comandos necessários para que o scanner funcione com permissões totais no Linux:
 
-## Dicas de Performance
-- Para redes locais: `-c 1000 -to 200ms`
-- Para redes externas (Internet): `-c 100 -to 500ms` (evita descarte de pacotes por latência).
+---
+
+
+
+## 🛠️ Opções e Comandos
+
+| Flag | Descrição | Exemplo |
+| --- | --- | --- |
+| `-t` | Alvo (IP ou Hostname) | `-t 192.168.1.1` |
+| `-p` | Range de portas | `-p 1-1024` ou `-p 80,443` |
+| `-c` | Concorrência (Workers) | `-c 500` |
+| `-to` | Timeout de conexão | `-to 300ms` |
+| `-o` | Arquivo de saída | `-o result.txt` |
+| `-v` | Modo Verboso | `-v` |
+
+---
+
+## 📖 Exemplo de Uso Rápido
+
+**Scan padrão em portas comuns:**
+
+```bash
+giosk -t scanme.nmap.org -p 1-1000 -v
+
+```
+
+**Scan agressivo em rede local:**
+
+```bash
+giosk -t 192.168.15.1 -p 1-65535 -c 1000 -to 200ms
+```
