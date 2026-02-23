@@ -1,10 +1,22 @@
 # GIOSK: Fast Service Discovery & Recon Engine
 
+```bash
+      /$$$$$$  /$$$$$$  /$$$$$$   /$$$$$$  /$$   /$$
+     /$$__  $$|_  $$_/ /$$__  $$ /$$__  $$| $$  /$$/
+    | $$  \__/  | $$  | $$  \ $$| $$  \__/| $$ /$$/ 
+    | $$ /$$$$  | $$  | $$  | $$|  $$$$$$ | $$$$$/  
+    | $$|_  $$  | $$  | $$  | $$ \____  $$| $$  $$  
+    | $$  \ $$  | $$  | $$  | $$ /$$  \ $$| $$\  $$ 
+    |  $$$$$$/ /$$$$$$|  $$$$$$/|  $$$$$$/| $$ \  $$
+     \______/ |______/ \______/  \______/ |__/  \__/                                                    
+```
+
 <div align="center">
 	<img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/go.png" alt="Go" title="Go"/>
 </div>
 
 Giosk é um scanner de portas de alta performance desenvolvido em Go, focado em reconhecimento ativo e identificação de banners de serviço. Diferente de scanners genéricos, o Giosk prioriza a velocidade de execução via worker pools e a extração imediata de metadados de serviços (Banner Grabbing).
+
 
 ## Por que o Giosk?
 No cenário de Segurança da Informação, o tempo entre o scan e a exploração é crítico. O Giosk foi construído para resolver três problemas principais:
