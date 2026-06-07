@@ -52,10 +52,6 @@ giosk -t 192.168.1.1 -p 1-1024 -v -o scan_report.txt
 ```
 <img width="804" height="363" alt="image" src="https://github.com/user-attachments/assets/239ddea3-2514-47ef-bb1f-be166cda928e" />
 
-Seu README está com uma base técnica excelente! Como o Giosk agora é um **Snap**, você pode substituir aquela seção de "Instalação (FUTURO)" por algo real e profissional.
-
-Aqui estão as adições sugeridas para o seu `README.md`, incluindo a seção de instalação e os comandos necessários para que o scanner funcione com permissões totais no Linux:
-
 ---
 
 
